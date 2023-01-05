@@ -5,47 +5,49 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
   <title>Document</title>
 </head>
 <body>
   <span> Hello world</span>
   <div class="container">
     <details open="open">
-      <summary class="first-level">myproject <button class="button">Show Code</button></summary>
+      <summary class="first-level"><div><span class="icon"></span>myproject</div><button class="button">Show Code</button></summary>
       <div class="folder">
-        <p>app.py</p>
-        <p>package.json</p>
+        <p class="last-node">app.py<button class="button">Show Code</button></p>
+        <p class="last-node">package.json<button class="button">Show Code</button></p>
         <details open="open">
-          <summary class="second-level">static</summary>
+          <summary class="second-level"><div><span class="icon"></span>static</div><button class="button">Show Code</button></summary>
           <div class="folder">
             <details>
-              <summary class="third-level">css</summary>
+              <summary class="third-level"><div><span class="icon"></span>css</div><button class="button">Show Code</button></summary>
               <div class="folder">
-                <p>index.css</p>
-                <p>template.css</p>
+                <p class="last-node">index.css<button class="button">Show Code</button></p>
+                <p class="last-node">template.css<button class="button">Show Code</button></p>
               </div>
             </details>
             <details open="open">
-              <summary class="third-level">js</summary>
+              <summary class="third-level"><div><span class="icon"></span>js</div><button class="button">Show Code</button></summary>
               <div class="folder">
-                <p>index.js</p>
-                <p>jquery-min.js</p>
+                <p class="last-node">index.js<button class="button">Show Code</button></p>
+                <p class="last-node">jquery-min.js<button class="button">Show Code</button></p>
               </div>
             </details>
             <details>
-              <summary class="third-level">img</summary>
+              <summary class="third-level"><div><span class="icon"></span>img</div><button class="button">Show Code</button></summary>
               <div class="folder">
-                <p>banner.png</p>
-                <p>foo.png</p>
+                <p class="last-node">banner.png<button class="button">Show Code</button></p>
+                <p class="last-node">foo.png<button class="button">Show Code</button></p>
               </div>
             </details>
           </div>
         </details>
         <details open="open">
-          <summary class="second-level">templates</summary>
+          <summary class="second-level"><div><span class="icon"></span>templates</div><button class="button">Show Code</button></summary>
           <div class="folder">
-            <p>index.html</p>
-            <p>template.html</p>
+            <p class="last-node">index.html<button class="button">Show Code</button></p>
+            <p class="last-node">template.html<button class="button">Show Code</button></p>
           </div>
         </details>
       </div>

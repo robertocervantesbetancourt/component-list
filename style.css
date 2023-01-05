@@ -6,7 +6,7 @@ body {
 .container {
   position: relative;
   display: block;
-  width: 600px;
+  width: 400px;
 }
 
 details {
@@ -18,11 +18,11 @@ details {
   transition: all 0.1s ease;
 }
 details ::-webkit-details-marker {
-  display: none;
+  display: block;
 }
 details > summary {
   position: relative;
-  margin-top: 0.25em;
+  margin-bottom: 0.5em;
   padding: 0.5625em 0.8em 0.5625em;
   height: 1.25em;
   border-radius: 0.375em;
@@ -37,6 +37,7 @@ details > summary:before {
 }
 details[open] > summary {
   color: #eee;
+  background: #20293A;
 }
 details[open] > summary:before {
   color: #ccc;
@@ -44,18 +45,21 @@ details[open] > summary:before {
 
 .folder {
   margin: 0 0 0.5em 0.86em;
-  padding: 0.5em 0em 0.5em 1.5em;
+  padding: 0.5em 0em 0.5em 1em;
   border-left: 0.1em #20293A dotted;
   border-bottom: 0.1em #20293A dotted;
 }
-.folder p {
-  margin-top: 0.25em;
-  margin-bottom: 0;
+.folder .last-node {
+  margin-top: 0.125em;
+  margin-bottom: 0.125em !important;
   padding: 0.5625em 0.8em 0.5625em;
   height: 1.25em;
   border-radius: 0.375em;
-  background: #7889A7;
+  background: #20293A;
   color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 details[open] {
@@ -66,21 +70,26 @@ details[open] {
 
 details:not([open]) .folder {
   height: 0px !important;
+  margin: 0px;
 }
 
-.first-level {
+details:not([open]) summary {
+  background: #4526FF;
   color: #ffffff;
-  background: #20293A;
 }
 
-.second-level {
-  color: #ffffff;
-  background: #394357;
+details[open] .icon::before {
+  content: "\f0d7";
+  font: var(--fa-font-solid);
 }
 
-.third-level {
-  color: #ffffff;
-  background: #4A6087;
+details:not([open]) .icon::before {
+  content: "\f0da";
+  font: var(--fa-font-solid);
+}
+
+.icon {
+  margin-right: 10px;
 }
 
 .button {
